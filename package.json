@@ -1,0 +1,26 @@
+{
+  "name": "playwright_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write './**/*.ts'",
+    "allureReport": "allure generate ./allure-results -o playwright-report --clean",
+    "test:test": "npm run prettier && TEST_ENV=test npx playwright test",
+    "test:uat": "npm run prettier && TEST_ENV=uat npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "eslint-plugin-prettier": "^5.1.3",
+    "playwright": "^1.44.1",
+    "prettier": "3.2.5"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
